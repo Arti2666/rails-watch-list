@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Movies</h1>
+
+<% @movies.each do |movie| %>
+<%= movie.title %>
+<%= movie.overview %>
+<div class: ><%= image_tag movie.poster_url%></div>
+<% end %>
+</div>
