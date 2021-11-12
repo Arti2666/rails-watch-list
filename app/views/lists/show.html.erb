@@ -1,6 +1,8 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://en.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_7112/salle-de-cin%C3%A9ma-%7C-630x405-%7C-%C2%A9-fotolia-he2/12344768-1-fre-FR/Salle-de-cin%C3%A9ma-%7C-630x405-%7C-%C2%A9-Fotolia-he2.jpg)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+url('<%= cl_image_path @list.photo.key, height: 300, width: 400, crop: :fill%>')">
   <h1><%=@list.name%></h1>
    <%= link_to "Return to lists", lists_path, class:"btn btn-primary", id:"return"%>
+   <%= link_to "Delete this list", listdelete_path, method: :delete, class:"btn btn-danger", id:"delete" %>
 </div>
 
 <div class="container">
